@@ -11,9 +11,11 @@ module sleep_module
   public :: fortran_sleep
 
   
-  ! Declare interface
+  ! Declare interface to invoke
+  ! C standard library (cstdlib)'s sleep function
   interface
-     function fortran_sleep (seconds) result (return_value) bind (C, name="sleep")
+     function fortran_sleep (seconds) &
+          result (return_value) bind (C, name="sleep")
           import :: C_INT
           integer (C_INT)                     :: return_value
           integer (C_INT), intent (in), value :: seconds
