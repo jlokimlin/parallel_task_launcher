@@ -1,6 +1,6 @@
 # **parallel\_task\_launcher**
 
-This code snippet uses the Python standard library to launch Fortran tasks in parallel (not to be confused with concurrency).
+This code snippet uses the Python standard library to launch Fortran tasks in parallel (not to be confused with concurrency). More specifically, it employs a fixed threadpool to run exactly 5 instances of your Fortran program, launching a new instance as soon as an old instance terminates, until you've exhausted var_grid.txt  
 
 -----------------------------------------------------------------------------
 
