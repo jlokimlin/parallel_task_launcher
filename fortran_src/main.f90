@@ -16,16 +16,16 @@ program main
     implicit none
 
     !----------------------------------------------------------------------
-    ! Dictionary: calling arguments
+    ! Dictionary:
     !----------------------------------------------------------------------
-    character (len=32) :: arg
+    character (len=42) :: arg
     real (wp)          :: real_arg
     !----------------------------------------------------------------------
 
     ! Read string from the command line
     call get_command_argument(1, arg)
 
-    ! Cast string to IEEE 64-bit float
+    ! Cast string to double precision real
     read( arg, '(e23.15e3)') real_arg
 
     ! Ignore initial compilation to generate executable .exe
